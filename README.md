@@ -30,7 +30,7 @@ fn bench(c: &mut Criterion) {
 - `src/main.rs` — стандартная программа `Hello, world!`; в работе бенчмарка практически не участвует.
 - `benches/sum_bench.rs` — реализация функции и регистрация бенчмарка.
 - `target/criterion/` — сформированные Criterion отчёты, статистика и графики.
-- `.gitignore` — исключает каталог `target`.
+
 
 Для Criterion отключён стандартный тестовый harness:
 
