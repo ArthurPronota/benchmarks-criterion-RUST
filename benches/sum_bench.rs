@@ -20,6 +20,14 @@ fn bench(c: &mut Criterion) {
     ));
 }
 
+// Макрос, используемый для определения группы функций для тестового каркаса (benchmark harness)
+// создаёт fn benches() { ... }
+criterion_group!(
+    benches, // сгенерированная макросом: запускает все бенчмарки группы
+    bench    // функция: описывает, что мерить
+);
 
-criterion_group!(benches, bench);
+// макрос Criterion. Он генерирует настоящую функцию fn main(), которая запускает 
+// бенчмарк-бинарник.
+// создаёт fn main() { benches() }
 criterion_main!(benches);
